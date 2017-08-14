@@ -86,13 +86,13 @@ class App extends Component {
                       return <TempGraf key={i} data={item.data}/>
                     break;
                   case '07':
-                      return <PresionChart key={i} title={refsNames[item.ref]}  data={item.data}/>
+                      return <PresionChart key={i} title={refsNames[item.ref]}  data={parseInt(item.data)}/>
                     break;
                   case '08':
                       return <LabelData key={i} title={refsNames[item.ref]}  text="volts" data={item.data}/>
                     break;
                 default:
-                return <CircleChart key={i} refs={item.ref} title={refsNames[item.ref]} data={item.data}/>
+                return <CircleChart key={i} refs={item.ref} title={refsNames[item.ref]} data={parseInt(item.data)}/>
               }
             })
           }

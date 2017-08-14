@@ -17,6 +17,7 @@ class PresionChart extends Component {
     this.a.update({ value: nextProps.data / 1000 })
   }
   render() {
+    console.warn('PresionChart', this.props.data);
     return (
       <section className="chartPanel">
         <h3>{this.props.title}</h3>
