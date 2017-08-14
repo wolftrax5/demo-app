@@ -32,16 +32,7 @@ const TempGraf = React.createClass({
         </div>
         <Thermometer Celcius={C.toFixed(2)} Fahrenheit={data}/>
       </Panel>
-        // <div ref='root'>
-        //     <div style={{width: '50%'}}>
-        //         <BarChart ylabel='Temperatura'
-        //           width={this.state.width}
-        //           height={300}
-        //           margin={margin}
-        //           data={[{text: `${data} °F`, value: data }, {text: `${C.toFixed(2)} °C`, value: C }]}
-        //           onBarClick={this.handleBarClick}/>
-        //     </div>
-        // </div>
+
     );
   }
 });
