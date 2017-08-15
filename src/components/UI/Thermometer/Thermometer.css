@@ -7,7 +7,7 @@
 }
 
 .thermometer {
-  border: 5px solid #5C525F;
+  border: 5px solid #4a4a4a;
   border-bottom: transparent;
   box-sizing: border-box;
   display: block;
@@ -21,7 +21,7 @@
 }
 
 .base {
-  box-shadow: 0 0 0 5px #FFF, 0 0 0 10px #5C525F;
+  box-shadow: 0 0 0 5px #FFF, 0 0 0 10px #4a4a4a;
   background: #ffae34;
   display: block;
   text-align: center;
@@ -49,7 +49,7 @@
 .stem .fluid {
   background: #ffae34;
   display: block;
-  transition: all;
+  transition: all 1s;
   width: 100%;
   border-radius: 25px 25px 0 0;
   position: absolute;

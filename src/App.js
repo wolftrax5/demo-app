@@ -7,6 +7,7 @@ import TempGraf from './components/TempGraf'
 import PresionChart from './components/PresionChart'
 import SpeedChart from './components/SpeedChart'
 import LabelData from './components/LabelData'
+import BatteryData from './components/BatteryData'
 
 import './App.css';
 
@@ -89,7 +90,7 @@ class App extends Component {
                       return <PresionChart key={i} title={refsNames[item.ref]}  data={parseInt(item.data)}/>
                     break;
                   case '08':
-                      return <LabelData key={i} title={refsNames[item.ref]}  text="volts" data={item.data}/>
+                      return <BatteryData key={i} title={refsNames[item.ref]} data={item.data}/>
                     break;
                 default:
                 return <CircleChart key={i} refs={item.ref} title={refsNames[item.ref]} data={parseInt(item.data)}/>

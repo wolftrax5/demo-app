@@ -6,7 +6,7 @@ const Thermometer = (props) => {
   // el la maxima temperatura es 120 ºF
   // el porsentaje de altura del mercurio es una regla de 3;
   const fluidheigh = (props.Fahrenheit * 100) / 120;
-  var divStyle = {
+  let divStyle = {
     height: `${fluidheigh}%`,
     WebkitTransition: 'all',
   };

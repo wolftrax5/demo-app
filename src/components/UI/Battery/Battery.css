@@ -1,0 +1,66 @@
+.batery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+}
+.batery--container {
+  width: 6rem;
+  height: 12rem;
+  position: relative;
+  margin: 0 auto;
+}
+
+.batery--container:before {
+  width: 50%;
+  height: 1.3rem;
+  margin: 0 auto;
+  left: 24px;
+  border-radius: 4px 4px 0 0;
+}
+
+.batery--container-body, .batery--container:before {
+  border: solid 4px rgb(74, 74, 74);
+}
+
+.batery--container:after {
+  border: solid 48px transparent;
+  border-left: solid 96px rgba(14, 20, 26, 0.15);
+  border-bottom-width: 0px;
+  border-top-width: 175px;
+  bottom: -29px;
+  left: 4px;
+}
+
+.batery--container:after, .batery--container:before, .batery--load:before, .batery--load:after {
+  content: "";
+  position: absolute;
+}
+
+.batery--container-body {
+  width: 100%;
+  margin-top: 25px;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  border-radius: 4px;
+  animation-fill-mode: forwards;
+}
+
+.batery--load {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  transition: height 2s;
+}
+
+.red {
+  background-color: #f51035;
+}
+.yellow {
+  background-color: #ffae34;
+}
+.green {
+  background-color: #bafc5c;
+}
