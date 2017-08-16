@@ -1,17 +1,8 @@
 import React , {Component} from 'react';
 import PropTypes from 'prop-types';
+import Panel from '../UI/Panel';
+import Compass from '../UI/Compass';
 
-function direction(data) {
-  if(data >= 0 && data < 90) {
-    return 'NORTE';
-  } else if (data >= 90 && data <= 180) {
-    return 'ESTE'
-  } else if (data >= 180 && data <= 270) {
-    return 'OESTE'
-  }else if (data >= 270 && data <= 360) {
-    return 'SUR'
-  }
-}
 class DirectionChar extends Component {
   constructor(props) {
     super(props)
@@ -33,13 +24,25 @@ class DirectionChar extends Component {
     })
   }
   render() {
+    const direction = this.direction(this.state.data);
     return (
-      <section className="chartPanel">
+      <Panel title={'Direccion del Viento'}>
         <h3>{this.props.title}</h3>
-        <p>{this.props.description}</p>
-          {direction(this.state.data)}
-      </section>
+          {direction}
+          <Compass direction={direction}/>
+      </Panel>
     );
+  }
+  direction(data) {
+    if(data >= 0 && data < 90) {
+      return 'NORTE';
+    } else if (data >= 90 && data <= 180) {
+      return 'ESTE'
+    } else if (data >= 180 && data <= 270) {
+      return 'OESTE'
+    }else if (data >= 270 && data <= 360) {
+      return 'SUR'
+    }
   }
 }
 

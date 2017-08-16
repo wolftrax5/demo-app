@@ -10,7 +10,6 @@ const Thermometer = (props) => {
     height: `${fluidheigh}%`,
     WebkitTransition: 'all',
   };
-console.warn(fluidheigh)
   return (
     <div className="thermometer_container">
       <div className="thermometer">
