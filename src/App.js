@@ -11,6 +11,7 @@ import BatteryData from './components/BatteryData'
 import HumidityIcon from './components/UI/Icons/HumidityIcon'
 import WindSpeedIcon from './components/UI/Icons/WindSpeedIcon'
 import RainIcon from './components/UI/Icons/RainIcon'
+import BatteryIcon from './components/UI/Icons/BatteryIcon'
 
 import './App.css';
 
@@ -96,7 +97,7 @@ class App extends Component {
                       return <PresionChart key={i} title={refsNames[item.ref]}  data={parseInt(item.data)}/>
                     break;
                   case '08':
-                      return <BatteryData key={i} title={refsNames[item.ref]} data={item.data}/>
+                      return <LabelData key={i} title={refsNames[item.ref]}  text="V" data={item.data} icon={<BatteryIcon width={36} height={57}/>}/>
                     break;
                 default:
                 return <CircleChart key={i} refs={item.ref} title={refsNames[item.ref]} data={parseInt(item.data)}/>
