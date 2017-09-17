@@ -33,7 +33,7 @@ const TempGraf = React.createClass({
       //   </div>
       //   <Thermometer Celcius={C.toFixed(2)} Fahrenheit={data}/>
       // </Panel>
-      <CardX2 slide1={data} slide1title={'Farenheit'} slide2title={'Centigrades'} slide2={C.toFixed(2)} title={'Temperature'} />
+      <CardX2 slide1={`${data.toFixed(2)}º`} slide1title={'Farenheit'} slide2title={'Centigrades'} slide2={`${C.toFixed(2)}º`} title={'Temperature'} />
     );
   }
 });

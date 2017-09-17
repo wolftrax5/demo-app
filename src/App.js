@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
+import logo2 from './logo-2.svg';
 import CircleChart from './components/CircleChart';
 import DirectionChar from './components/DirectionChar';
 import dataFormat from './util'
@@ -29,7 +30,17 @@ class App extends Component {
     this.state = {
       data1: 30,
       data2: 45.5,
-      data: [],
+      data: [
+        {ref: "01", type: "02", typeName: "analogInput", data: 225},
+        {ref: "02", type: "02", typeName: "analogInput", data: 1.49},
+        {ref: "03", type: "68", typeName: "humiditySensor", data: 76.5},
+        {ref: "04", type: "67", typeName: "temperatureSensor", data: 69.5},
+        {ref: "05", type: "02", typeName: "analogInput", data: 0.01},
+        {ref: "06", type: "02", typeName: "analogInput", data: 0.26},
+        {ref: "07", type: "73", typeName: "barometer", data: 813.5},
+        {ref: "08", type: "02", typeName: "analogInput", data: 2.34},
+        {ref: "09", type: "65", typeName: "illuminanceSensor", data: 0},
+      ],
       refsNames: {
         '01': 'winddir',
         '02': 'windspeedmph',
@@ -71,39 +82,28 @@ class App extends Component {
     return (
       <div className="App">
         <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Beelan Demo Estación Meteorológica</h2>
+          <img src={logo2} className="App-logo" alt="logo" />
+          <h2>Station <u>Aguascalientes, Ags</u></h2>
         </div>
         <div className="chartsSections">
-          {
-            data.map((item, i) => {
-              switch (item.ref) {
-                case '01':
-                  return <DirectionChar key={i} refs={item.ref} title={refsNames[item.ref]} data={item.data}/>
-                  break;
-                case '02':
-                  return <LabelData key={i} refs={item.ref} title={refsNames[item.ref]}  text="mp/h" data={item.data} icon={<WindSpeedIcon width={74} height={66}/>}/>
-                  break;
-                case '03':
-                  return <LabelData key={i} title={refsNames[item.ref]}  text="%" data={item.data} icon={<HumidityIcon width={48} height={62}/>}/>
-                  break;
-                case '05':
-                  return <LabelData key={i} title={refsNames[item.ref]}  text="%" data={item.data} icon={<RainIcon width={70} height={70}/>}/>
-                  break;
-                  case '04':
-                      return <TempGraf key={i} data={item.data}/>
-                    break;
-                  case '07':
-                      return <PresionChart key={i} title={refsNames[item.ref]}  data={parseInt(item.data)}/>
-                    break;
-                  case '08':
-                      return <LabelData key={i} title={refsNames[item.ref]}  text="V" data={item.data} icon={<BatteryIcon width={36} height={57}/>}/>
-                    break;
-                default:
-                return <CircleChart key={i} refs={item.ref} title={refsNames[item.ref]} data={parseInt(item.data)}/>
-              }
-            })
-          }
+            <div>
+              <TempGraf  data={data[3].data}/>
+             </div>
+
+             <div className="section-label" >
+               <DirectionChar refs={'01'} title={refsNames['01']} data={data[0].data}/>
+               <div className="section-label-small">
+                 <div className="smalls">
+                   <LabelData refs={'02'} title={refsNames['02']}  text="mp/h" data={data[1].data} icon={<WindSpeedIcon width={74} height={66}/>}/>
+                   <LabelData title={refsNames['03']}  text="%" data={data[2].data} icon={<HumidityIcon width={48} height={62}/>}/>
+                 </div>
+                 <div className="smalls">
+                   <LabelData title={refsNames['05']}  text="%" data={data[4].data} icon={<RainIcon width={70} height={70}/>}/>
+                   <LabelData title={refsNames['08']}  text="V" data={data[7].data} icon={<BatteryIcon width={36} height={57}/>}/>
+                 </div>
+               </div>
+
+             </div>
         </div>
       </div>
     );

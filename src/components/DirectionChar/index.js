@@ -40,13 +40,13 @@ class DirectionChar extends Component {
   }
   direction(data) {
     if(data >= 0 && data < 90) {
-      return 'NORTE';
+      return 'North';
     } else if (data >= 90 && data <= 180) {
-      return 'ESTE'
+      return 'East'
     } else if (data >= 180 && data <= 270) {
-      return 'OESTE'
+      return 'West'
     }else if (data >= 270 && data <= 360) {
-      return 'SUR'
+      return 'South'
     }
   }
 }

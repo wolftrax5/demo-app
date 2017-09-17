@@ -4,8 +4,10 @@
 .App .chartsSections {
   padding: 20px;
   display: flex;
+  flex: 1;
   flex-wrap: wrap;
   align-items: center;
+  flex-direction: column;
   justify-content: space-around;
   background-color: #fff;
 }
@@ -15,14 +17,29 @@
 }
 
 .App-header {
-  background-color: #222;
+  background-color: #FFF;
   height: 150px;
+  font-family: Quicksand;
   padding: 20px;
-  color: white;
+  color: #25232E;
+}
+.App-header u {
+  font-size: 18px;
+  text-decoration: none;
 }
 
 .App-intro {
   font-size: large;
+}
+.section-label {
+  display: flex;
+  margin: 10px;
+}
+.section-label-small {
+  display: flex;
+}
+.smalls {
+  margin: 5px;
 }
 
 @keyframes App-logo-spin {
