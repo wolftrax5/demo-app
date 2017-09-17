@@ -11,7 +11,7 @@ const WindSpeedIcon = (props) => {
 }
 WindSpeedIcon.propTypes = {
   width: PropTypes.number,
-  height: PropTypes.height,
+  height: PropTypes.number,
   fill: PropTypes.string,
 }
 WindSpeedIcon.defaultProps = {

@@ -1,6 +1,7 @@
 import React from 'react';
 import BarChart from 'react-bar-chart';
 import Panel from '../UI/Panel';
+import CardX2 from '../UI/CardX2';
 
 import Thermometer from '../UI/Thermometer';
 
@@ -24,15 +25,15 @@ const TempGraf = React.createClass({
     const {data} = this.props
     const C = (data - 32)/1.8
     return (
-      <Panel title="Temperatura">
-        <div>
-          {`${data} °F`}
-          <br/>
-          {`${C.toFixed(2)} °C`}
-        </div>
-        <Thermometer Celcius={C.toFixed(2)} Fahrenheit={data}/>
-      </Panel>
-
+      // <Panel title="Temperatura">
+      //   <div>
+      //     {`${data} °F`}
+      //     <br/>
+      //     {`${C.toFixed(2)} °C`}
+      //   </div>
+      //   <Thermometer Celcius={C.toFixed(2)} Fahrenheit={data}/>
+      // </Panel>
+      <CardX2 slide1={data} slide1title={'Farenheit'} slide2title={'Centigrades'} slide2={C.toFixed(2)} title={'Temperature'} />
     );
   }
 });

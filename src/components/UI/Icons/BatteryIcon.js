@@ -13,7 +13,7 @@ const BatteryIcon = (props) => {
 }
 BatteryIcon.propTypes = {
   width: PropTypes.number,
-  height: PropTypes.height,
+  height: PropTypes.number,
   fill: PropTypes.string,
 }
 BatteryIcon.defaultProps = {

@@ -1,0 +1,46 @@
+.cardx2 {
+  min-width: 280px;
+  min-height: 268px;
+  padding: 10px;
+  border-radius: 2px;
+  background-color: #25232E;
+  box-shadow: 0px -2px 47px -10px rgba(0,0,0,0.75);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.cardx2-data {
+  color: #FFF;
+  font-family: Quicksand;
+  align-self: flex-start;
+}
+.cardx2-icon {
+  display: flex;
+  justify-content: flex-end;
+}
+.cardx2-data-slides {
+  display: flex;
+  flex: 1;
+}
+
+.cardx2 .title{
+  font-size: 18px;
+  margin: 0;
+  letter-spacing: 4px;
+  text-align: left;
+  color: #FFF;
+  font-family: Quicksand;
+}
+.cardx2-data-inf .normal {
+  font-size: 18px;
+  margin: 0;
+  letter-spacing: 4px;
+  text-align: center;
+  color: #FDDF7D;
+}
+.cardx2-data .cardx2-data-inf {
+  font-size: 70px;
+  display: flex;
+  flex-flow: column;
+  width: 300px;
+}

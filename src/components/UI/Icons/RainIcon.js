@@ -11,7 +11,7 @@ const RainIcon = (props) => {
 }
 RainIcon.propTypes = {
   width: PropTypes.number,
-  height: PropTypes.height,
+  height: PropTypes.number,
   fill: PropTypes.string,
 }
 RainIcon.defaultProps = {
