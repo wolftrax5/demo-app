@@ -9,6 +9,7 @@ import SpeedChart from './components/SpeedChart'
 import LabelData from './components/LabelData'
 import BatteryData from './components/BatteryData'
 import HumidityIcon from './components/UI/Icons/HumidityIcon'
+import WindSpeedIcon from './components/UI/Icons/WindSpeedIcon'
 
 import './App.css';
 
@@ -79,7 +80,7 @@ class App extends Component {
                   return <DirectionChar key={i} refs={item.ref} title={refsNames[item.ref]} data={item.data}/>
                   break;
                 case '02':
-                  return <SpeedChart key={i} refs={item.ref} title={refsNames[item.ref]} data={item.data}/>
+                  return <LabelData key={i} refs={item.ref} title={refsNames[item.ref]}  text="mp/h" data={item.data} icon={<WindSpeedIcon width={74} height={66}/>}/>
                   break;
                 case '03':
                   return <LabelData key={i} title={refsNames[item.ref]}  text="%" data={item.data} icon={<HumidityIcon width={48} height={62}/>}/>
