@@ -10,6 +10,7 @@ import LabelData from './components/LabelData'
 import BatteryData from './components/BatteryData'
 import HumidityIcon from './components/UI/Icons/HumidityIcon'
 import WindSpeedIcon from './components/UI/Icons/WindSpeedIcon'
+import RainIcon from './components/UI/Icons/RainIcon'
 
 import './App.css';
 
@@ -84,6 +85,9 @@ class App extends Component {
                   break;
                 case '03':
                   return <LabelData key={i} title={refsNames[item.ref]}  text="%" data={item.data} icon={<HumidityIcon width={48} height={62}/>}/>
+                  break;
+                case '05':
+                  return <LabelData key={i} title={refsNames[item.ref]}  text="%" data={item.data} icon={<RainIcon width={70} height={70}/>}/>
                   break;
                   case '04':
                       return <TempGraf key={i} data={item.data}/>
