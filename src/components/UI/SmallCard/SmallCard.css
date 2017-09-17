@@ -1,0 +1,33 @@
+.small_card {
+  min-width: 280px;
+  min-height: 124px;
+  padding: 0 0 0 10px;
+  border-radius: 2px;
+  background-color: #25232E;
+  box-shadow: 0px -2px 47px -10px rgba(0,0,0,0.75);
+  display: flex;
+  justify-content: space-around;
+}
+.small_card-data {
+  color: #FFF;
+  font-family: Quicksand;
+  align-self: flex-start;
+}
+.small_card-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FDDF7D;
+  border-radius: 50% 0px 0px 50%;
+  width: 100%;
+}
+.small_card-data .normal{
+  font-size: 18px;
+  margin: 0;
+  letter-spacing: 4px;
+  text-align: left;
+}
+.small_card-data .small_card-data-inf {
+  font-size: 70px;
+  margin-right: 10px;
+}

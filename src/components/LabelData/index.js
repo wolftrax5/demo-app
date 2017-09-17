@@ -1,5 +1,7 @@
 import React , {Component} from 'react';
 import PropTypes from 'prop-types';
+import SmallCard from '../UI/SmallCard'
+import HumidityIcon from '../UI/Icons/HumidityIcon'
 
 class LabelData extends Component {
   constructor(props) {
@@ -21,11 +23,17 @@ class LabelData extends Component {
   }
   render() {
     return (
-      <section className="chartPanel">
-        <h3>{this.props.title}</h3>
-        <p>{this.props.description}</p>
-          {`${this.state.data} ${this.props.text}`}
-      </section>
+      // <section className="chartPanel">
+      //   <h3>{this.props.title}</h3>
+      //   <p>{this.props.description}</p>
+      //     {`${this.state.data} ${this.props.text}`}
+      // </section>
+      <SmallCard
+        title = {this.props.title}
+        unit= {this.props.text}
+        icon={this.props.icon}>
+         {`${this.state.data}`}
+      </SmallCard>
     );
   }
 }
